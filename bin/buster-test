@@ -22,8 +22,7 @@ testCli.create(process.stdout, process.stderr, {
     extensions: {
         browser: [
             require(path.join(busterPath, "framework-extension")),
-            require(path.join(busterPath, "wiring-extension")),
-            require("buster-syntax").create({ ignoreReferenceErrors: true })
+            require(path.join(busterPath, "wiring-extension"))
         ]
     }
 }).run(process.argv.slice(2), function (err) {
